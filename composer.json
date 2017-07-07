@@ -1,6 +1,6 @@
 {
   "name": "app-verk/api-exception-bundle",
-  "description": "catch all Symfony 3.3 errors and convert it to problem+json RFC7807 response",
+  "description": "catch all Symfony 3.3 errors and convert it to problem json RFC7807 response",
   "type": "symfony-bundle",
   "authors": [
     {
@@ -9,7 +9,7 @@
     }
   ],
   "keywords": [
-    "problem+json",
+    "problem json",
     "api-problem",
     "api exceptions"
   ],
