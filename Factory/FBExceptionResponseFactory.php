@@ -13,8 +13,7 @@ class FBExceptionResponseFactory implements ResponseFactoryInterface
         $data = $apiProblem->ToArray();
 
         $response = new JsonResponse(
-            $data,
-            $apiProblem->getStatusCode()
+            $this->prepareData($data)
         );
 
         $response->headers->set('Content-Type', 'application/problem+json');
