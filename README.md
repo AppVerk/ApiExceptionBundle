@@ -82,4 +82,4 @@ create new `CustomResponseFactory`:
 ### Config reference:
 
     app_verk_api_exception:
-        response_factory: '@AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
+        response_factory: AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory
