@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: true
+        public: false
+
+    AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface:
+        class: '%appverk_api_exception.response_factory%'
+
+    AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory: ~
+    AppVerk\ApiExceptionBundle\Factory\FBExceptionResponseFactory: ~
+
+    AppVerk\ApiExceptionBundle\EventListener\ApiExceptionSubscriber:
+        arguments:
+            $debug: '%kernel.debug%'
+            $responseFactory: '@AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
+
+    AppVerk\ApiExceptionBundle\Factory\ApiProblemFactory:
+        arguments:
+            $translator: '@translator'

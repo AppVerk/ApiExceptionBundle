@@ -1,0 +1,29 @@
+{
+  "name": "app-verk/api-exception-bundle",
+  "description": "catch all Symfony 3.3 errors and convert it to problem+json RFC7807 response",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Michał Jędraszczyk",
+      "email": "m.jedrasz@gmail.com"
+    }
+  ],
+  "keywords": [
+    "problem+json",
+    "api-problem",
+    "api exceptions"
+  ],
+  "license": [
+    "MIT"
+  ],
+  "require": {
+    "php": "^7.0",
+    "symfony/symfony": "3.3.*",
+    "sensio/framework-extra-bundle": "^3.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AppVerk\\ApiExceptionBundle\\": ""
+    }
+  }
+}
