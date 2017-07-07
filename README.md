@@ -1,7 +1,7 @@
 # ApiExceptionBundle
 Catch all Symfony 3.3 errors and convert it to problem+json RFC7807 response
 
-##Installation:
+## Installation:
 
 Required the bundle with composer:
 
@@ -21,7 +21,7 @@ Add bundle to AppKernel:
             );
         }
         
-##Configuration:
+## Configuration:
 
 AppVerkApiProblemExceptionBundle automatically catch your errors 
 by `ApiExceptionSubscriber` and return `application/problem+json` response:
@@ -33,10 +33,10 @@ by `ApiExceptionSubscriber` and return `application/problem+json` response:
       "title": "Not Found"
     }
     
-####changing data structure:
+#### changing data structure:
 Bundle provide `ResponseFactoryInterface` for overriding response data, if u want change response data.
 
-#####Example usage:
+##### Example usage:
 
 to receive response like:
 
@@ -79,7 +79,7 @@ create new `CustomResponseFactory`:
         }
     }
     
-###Config reference:
+### Config reference:
 
     app_verk_api_exception:
         response_factory: '@AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
