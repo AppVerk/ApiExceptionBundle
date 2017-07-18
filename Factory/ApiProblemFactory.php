@@ -3,7 +3,6 @@
 namespace AppVerk\ApiExceptionBundle\Factory;
 
 use AppVerk\ApiExceptionBundle\Api\ApiProblem;
-use AppVerk\ApiExceptionBundle\Component\Api\ApiProblemInterface;
 use AppVerk\ApiExceptionBundle\Component\Factory\ApiProblemFactoryInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -19,7 +18,7 @@ class ApiProblemFactory implements ApiProblemFactoryInterface
         $this->translator = $translator;
     }
 
-    public function create($statusCode, $type = null, $details = null): ApiProblemInterface
+    public function create($statusCode, $type = null, $details = null)
     {
         $apiProblem = new ApiProblem($statusCode, $type);
         if ($details) {
