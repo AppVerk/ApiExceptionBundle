@@ -1,0 +1,11 @@
+framework:
+    secret: 'testsecret'
+    router:
+        resource: '%kernel.project_dir%/test/app/config/routing.yml'
+        strict_requirements: ~
+    validation: { enable_annotations: true }
+
+app_verk_api_exception:
+    response_factory: AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory
+    enabled: true
+    paths_excluded: ['/admin/']

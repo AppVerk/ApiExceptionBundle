@@ -16,9 +16,17 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->addDefaultsIfNotSet()
             ->children()
-            ->scalarNode('response_factory')
-            ->defaultValue(ApiProblemResponseFactory::class)
-            ->end()
+                ->scalarNode('response_factory')
+                    ->defaultValue(ApiProblemResponseFactory::class)
+                ->end()
+                ->scalarNode('enabled')
+                    ->defaultValue(true)
+                ->end()
+                ->arrayNode('paths_excluded')
+                    ->beforeNormalization()->ifString()->then(function ($v) { return array($v); })->end()
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array('/admin/'))->end()
+                ->end()
             ->end();
 
         return $treeBuilder;

@@ -1,0 +1,9 @@
+defult_get:
+    path: /admin/exception
+    defaults: {_controller: AppVerkApiExceptionBundle:Default:admin}
+    methods: [GET]
+
+defult_post:
+    path: /default/exception
+    defaults: {_controller: AppVerkApiExceptionBundle:Default:apiException}
+    methods: [GET]

@@ -14,6 +14,8 @@ services:
         arguments:
             $debug: '%kernel.debug%'
             $responseFactory: '@AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
+            $enabled: '%appverk_api_exception.enabled%'
+            $excludedPaths: '%appverk_api_exception.paths_excluded%'
 
     AppVerk\ApiExceptionBundle\Factory\ApiProblemFactory:
         arguments:

@@ -17,6 +17,8 @@ class AppVerkApiExceptionExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         $container->setParameter('appverk_api_exception.response_factory', $config['response_factory']);
+        $container->setParameter('appverk_api_exception.enabled', $config['enabled']);
+        $container->setParameter('appverk_api_exception.paths_excluded', $config['paths_excluded']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
