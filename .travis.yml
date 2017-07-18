@@ -13,14 +13,6 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
-# Matrix to test in every php version
-matrix:
-  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
-  fast_finish: true
-  include:
-    - php: 7.0
-    - php: 5.6
-
 # Define an environment variable
 env:
   global:
@@ -30,6 +22,17 @@ env:
       - VHOST_CONF=travis.conf
       - VHOST_URL=travis.dev
       - SYMFONY_VERSION="3.3.*" DB=mysql
+      - PHP_VERSION=""
+
+# Matrix to test in every php version
+matrix:
+  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
+  fast_finish: true
+  include:
+    - php: 7.0
+      env: PHP_VERSION="7"
+    - php: 5.6
+      env: PHP_VERSION="5"
 
 # Install composer dependencies,
 # Create database, schema and fixtures
@@ -39,7 +42,7 @@ before_script:
   - sudo apt-get install apache2 libapache2-mod-fastcgi
   # enable php-fpm
   - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
-  - if [ "$(phpenv version-name)" == "5.6.2" ]; then sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf; if
+  - if [ "$PHP_VERSION" == "7" ]; then sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf; if
   - sudo a2enmod rewrite actions fastcgi alias
   - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
