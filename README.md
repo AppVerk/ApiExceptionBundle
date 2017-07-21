@@ -85,5 +85,7 @@ create new `CustomResponseFactory`:
 
     app_verk_api_exception:
         response_factory: AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory
-        enabled: #default true
-        paths: #default [], defines on which url bundle will not work
+        enabled: true
+        paths_excluded:
+            - /admin/
+
