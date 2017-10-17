@@ -86,6 +86,5 @@ create new `CustomResponseFactory`:
     app_verk_api_exception:
         response_factory: AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory
         enabled: true
-        paths_excluded:
-            - /admin/
+        paths_excluded: ['/admin/']
 
