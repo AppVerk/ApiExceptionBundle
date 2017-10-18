@@ -44,7 +44,7 @@ class DefaultControllerTest extends WebTestCase
     public function testDefaultException()
     {
         $response = self::$staticClient->get('/default/exception');
-        var_dump($response->getStatusCode(), $response->getBody()->getContents(), $response->getHeaders());die();
+
         $this->assertNotEquals(Response::HTTP_NOT_FOUND, $response->getStatusCode());
         $this->assertEquals('application/problem+json', $response->getHeader('Content-Type'));
         $data = json_decode($response->getBody()->getContents());
