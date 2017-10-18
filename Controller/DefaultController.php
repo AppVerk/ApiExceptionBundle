@@ -6,7 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use AppVerk\ApiExceptionBundle\Exception\ApiProblemException;
 use AppVerk\ApiExceptionBundle\Api\ApiProblem;
-use Symfony\Component\Validator\Exception\ValidatorException;
 
 class DefaultController extends Controller
 {
