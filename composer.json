@@ -18,7 +18,7 @@
   ],
   "require": {
     "php": "^7.0",
-    "symfony/symfony": "3.3.*",
+    "symfony/symfony": "3.*",
     "sensio/framework-extra-bundle": "^3.0.2",
     "phpunit/phpunit": "^6.2",
     "polishsymfonycommunity/symfony-mocker-container": "^1.0",
