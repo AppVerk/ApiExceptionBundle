@@ -1,7 +1,7 @@
 # ApiExceptionBundle
 [![Build Status](https://travis-ci.org/AppVerk/ApiExceptionBundle.svg?branch=master)](https://travis-ci.org/AppVerk/ApiExceptionBundle)
 
-Catch all Symfony 3.3 errors and convert it to problem+json RFC7807 response
+Catch all Symfony 3.3 or newer errors and convert it to problem+json RFC7807 response
 
 ## Installation:
 

@@ -1,6 +1,6 @@
 {
   "name": "app-verk/api-exception-bundle",
-  "description": "catch all Symfony 3.3 errors and convert it to problem json RFC7807 response",
+  "description": "catch all Symfony 3.3 or newer errors and convert it to problem json RFC7807 response",
   "type": "symfony-bundle",
   "authors": [
     {
@@ -19,7 +19,7 @@
   "require": {
     "php": "^7.0",
     "symfony/symfony": "3.*",
-    "sensio/framework-extra-bundle": "^3.0.2",
+    "sensio/framework-extra-bundle": "^3.0.2||^5.0.0",
     "phpunit/phpunit": "^6.2",
     "polishsymfonycommunity/symfony-mocker-container": "^1.0",
     "symfony/phpunit-bridge": "^3.0",
