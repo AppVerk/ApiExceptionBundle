@@ -1,5 +1,5 @@
 {
-  "name": "asoft-passio/api-exception-bundle",
+  "name": "soft-passio/api-exception-bundle",
   "description": "catch all Symfony 3.3 or newer errors and convert it to problem json RFC7807 response",
   "type": "symfony-bundle",
   "authors": [
