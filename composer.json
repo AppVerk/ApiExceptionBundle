@@ -17,8 +17,8 @@
     "MIT"
   ],
   "require": {
-    "php": "^7.0",
-    "symfony/symfony": "3.*",
+    "php": "^7.2",
+    "symfony/symfony": "4.2.*",
     "sensio/framework-extra-bundle": "^3.0.2||^5.0.0",
     "phpunit/phpunit": "^6.2",
     "polishsymfonycommunity/symfony-mocker-container": "^1.0",
