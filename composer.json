@@ -17,12 +17,11 @@
     "MIT"
   ],
   "require": {
-    "php": "^7.0",
-    "symfony/symfony": "3.*",
-    "sensio/framework-extra-bundle": "^3.0.2||^5.0.0",
+    "php": "^7.2",
+    "sensio/framework-extra-bundle": "^5.3",
     "phpunit/phpunit": "^6.2",
     "polishsymfonycommunity/symfony-mocker-container": "^1.0",
-    "symfony/phpunit-bridge": "^3.0",
+    "symfony/phpunit-bridge": "^4.2",
     "guzzlehttp/guzzle": "^5.0"
   },
   "autoload": {

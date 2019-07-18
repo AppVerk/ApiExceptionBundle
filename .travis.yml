@@ -21,14 +21,14 @@ env:
       - VHOST_FILE=.travis.vhost
       - VHOST_CONF=travis.conf
       - VHOST_URL=travis.dev
-      - SYMFONY_VERSION="3.3.*" DB=mysql
+      - SYMFONY_VERSION="4.2.*" DB=mysql
 
 # Matrix to test in every php version
 matrix:
   # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
   fast_finish: true
   include:
-    - php: 7.0
+    - php: 7.2
 
 # Install composer dependencies,
 # Create database, schema and fixtures
