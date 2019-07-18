@@ -1,11 +1,15 @@
 {
   "name": "soft-passio/api-exception-bundle",
-  "description": "catch all Symfony 3.3 or newer errors and convert it to problem json RFC7807 response",
+  "description": "catch all Symfony errors and convert it to problem json RFC7807 response",
   "type": "symfony-bundle",
   "authors": [
     {
       "name": "Michał Jędraszczyk",
       "email": "m.jedrasz@gmail.com"
+    },
+    {
+      "name": "Rafał Narowski",
+      "email": "rafal.narowski@o2.pl"
     }
   ],
   "keywords": [
@@ -26,7 +30,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AppVerk\\ApiExceptionBundle\\": ""
+      "SoftPassio\\ApiExceptionBundle\\": ""
     }
   }
 }

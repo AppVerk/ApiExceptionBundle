@@ -1,10 +1,10 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\EventListener;
+namespace SoftPassio\ApiExceptionBundle\EventListener;
 
-use AppVerk\ApiExceptionBundle\Api\ApiProblem;
-use AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface;
-use AppVerk\ApiExceptionBundle\Exception\ApiProblemException;
+use SoftPassio\ApiExceptionBundle\Api\ApiProblem;
+use SoftPassio\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface;
+use SoftPassio\ApiExceptionBundle\Exception\ApiProblemException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;

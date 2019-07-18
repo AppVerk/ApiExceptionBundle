@@ -1,5 +1,4 @@
 # ApiExceptionBundle
-[![Build Status](https://travis-ci.org/AppVerk/ApiExceptionBundle.svg?branch=master)](https://travis-ci.org/AppVerk/ApiExceptionBundle)
 
 Catch all Symfony 3.3 or newer errors and convert it to problem+json RFC7807 response
 
@@ -7,7 +6,7 @@ Catch all Symfony 3.3 or newer errors and convert it to problem+json RFC7807 res
 
 Required the bundle with composer:
 
-    $ php composer.phar require app-verk/api-exception-bundle
+    $ php composer.phar require soft-passio/api-exception-bundle
     
 Add bundle to AppKernel:
 
@@ -19,13 +18,13 @@ Add bundle to AppKernel:
             $bundles = array(
                 // ...
                 
-                new AppVerk\ApiExceptionBundle\AppVerkApiExceptionBundle(),
+                new SoftPassio\ApiExceptionBundle\ApiExceptionBundle(),
             );
         }
         
 ## Configuration:
 
-AppVerkApiProblemExceptionBundle automatically catch your errors 
+SoftPassioApiProblemExceptionBundle automatically catch your errors 
 by `ApiExceptionSubscriber` and return `application/problem+json` response:
 
     {
@@ -83,8 +82,8 @@ create new `CustomResponseFactory`:
     
 ### Config reference:
 
-    app_verk_api_exception:
-        response_factory: AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory
+    soft_passio_api_exception:
+        response_factory: SoftPassio\ApiExceptionBundle\Factory\ApiProblemResponseFactory
         enabled: true
         paths_excluded: ['/admin/']
 

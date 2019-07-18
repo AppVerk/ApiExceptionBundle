@@ -4,19 +4,19 @@ services:
         autoconfigure: true
         public: false
 
-    AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface:
-        class: '%appverk_api_exception.response_factory%'
+    SoftPassio\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface:
+        class: '%soft_passio_api_exception.response_factory%'
 
-    AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory: ~
-    AppVerk\ApiExceptionBundle\Factory\FBExceptionResponseFactory: ~
+    SoftPassio\ApiExceptionBundle\Factory\ApiProblemResponseFactory: ~
+    SoftPassio\ApiExceptionBundle\Factory\FBExceptionResponseFactory: ~
 
-    AppVerk\ApiExceptionBundle\EventListener\ApiExceptionSubscriber:
+    SoftPassio\ApiExceptionBundle\EventListener\ApiExceptionSubscriber:
         arguments:
             $debug: '%kernel.debug%'
-            $responseFactory: '@AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
-            $enabled: '%appverk_api_exception.enabled%'
-            $excludedPaths: '%appverk_api_exception.paths_excluded%'
+            $responseFactory: '@SoftPassio\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface'
+            $enabled: '%soft_passio_api_exception.enabled%'
+            $excludedPaths: '%soft_passio_api_exception.paths_excluded%'
 
-    AppVerk\ApiExceptionBundle\Factory\ApiProblemFactory:
+    SoftPassio\ApiExceptionBundle\Factory\ApiProblemFactory:
         arguments:
             $translator: '@translator'

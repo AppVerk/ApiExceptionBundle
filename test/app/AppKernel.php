@@ -10,7 +10,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new AppVerk\ApiExceptionBundle\AppVerkApiExceptionBundle(),
+            new SoftPassio\ApiExceptionBundle\ApiExceptionBundle(),
         ];
 
         return $bundles;

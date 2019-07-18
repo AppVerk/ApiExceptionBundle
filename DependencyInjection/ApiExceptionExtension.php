@@ -1,13 +1,13 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\DependencyInjection;
+namespace SoftPassio\ApiExceptionBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class AppVerkApiExceptionExtension extends Extension
+class ApiExceptionExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -16,9 +16,9 @@ class AppVerkApiExceptionExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-        $container->setParameter('appverk_api_exception.response_factory', $config['response_factory']);
-        $container->setParameter('appverk_api_exception.enabled', $config['enabled']);
-        $container->setParameter('appverk_api_exception.paths_excluded', $config['paths_excluded']);
+        $container->setParameter('soft_passio_api_exception.response_factory', $config['response_factory']);
+        $container->setParameter('soft_passio_api_exception.enabled', $config['enabled']);
+        $container->setParameter('soft_passio_api_exception.paths_excluded', $config['paths_excluded']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

@@ -1,9 +1,9 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Factory;
+namespace SoftPassio\ApiExceptionBundle\Factory;
 
-use AppVerk\ApiExceptionBundle\Api\ApiProblem;
-use AppVerk\ApiExceptionBundle\Component\Factory\ApiProblemFactoryInterface;
+use SoftPassio\ApiExceptionBundle\Api\ApiProblem;
+use SoftPassio\ApiExceptionBundle\Component\Factory\ApiProblemFactoryInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 
 class ApiProblemFactory implements ApiProblemFactoryInterface

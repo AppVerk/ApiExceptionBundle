@@ -1,11 +1,11 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Controller;
+namespace SoftPassio\ApiExceptionBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use AppVerk\ApiExceptionBundle\Exception\ApiProblemException;
-use AppVerk\ApiExceptionBundle\Api\ApiProblem;
+use SoftPassio\ApiExceptionBundle\Exception\ApiProblemException;
+use SoftPassio\ApiExceptionBundle\Api\ApiProblem;
 
 class DefaultController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AppVerk\ApiTestCasesBundle\test\Tests\Controller;
+namespace SoftPassio\ApiTestCasesBundle\test\Tests\Controller;
 
-use AppVerk\ApiExceptionBundle\Api\ApiProblem;
+use SoftPassio\ApiExceptionBundle\Api\ApiProblem;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use GuzzleHttp\Client;

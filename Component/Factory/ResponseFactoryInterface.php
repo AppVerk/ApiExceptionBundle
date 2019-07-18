@@ -1,8 +1,8 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Component\Factory;
+namespace SoftPassio\ApiExceptionBundle\Component\Factory;
 
-use AppVerk\ApiExceptionBundle\Component\Api\ApiProblemInterface;
+use SoftPassio\ApiExceptionBundle\Component\Api\ApiProblemInterface;
 
 interface ResponseFactoryInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Component\Api;
+namespace SoftPassio\ApiExceptionBundle\Component\Api;
 
 interface ApiProblemInterface
 {

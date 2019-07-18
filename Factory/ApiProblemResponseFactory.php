@@ -1,9 +1,9 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Factory;
+namespace SoftPassio\ApiExceptionBundle\Factory;
 
-use AppVerk\ApiExceptionBundle\Component\Api\ApiProblemInterface;
-use AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface;
+use SoftPassio\ApiExceptionBundle\Component\Api\ApiProblemInterface;
+use SoftPassio\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ApiProblemResponseFactory implements ResponseFactoryInterface

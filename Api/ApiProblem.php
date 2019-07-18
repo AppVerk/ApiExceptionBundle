@@ -1,8 +1,8 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Api;
+namespace SoftPassio\ApiExceptionBundle\Api;
 
-use AppVerk\ApiExceptionBundle\Component\Api\ApiProblemInterface;
+use SoftPassio\ApiExceptionBundle\Component\Api\ApiProblemInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 /**

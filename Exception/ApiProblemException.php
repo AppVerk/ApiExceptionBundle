@@ -1,8 +1,8 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\Exception;
+namespace SoftPassio\ApiExceptionBundle\Exception;
 
-use AppVerk\ApiExceptionBundle\Component\Api\ApiProblemInterface;
+use SoftPassio\ApiExceptionBundle\Component\Api\ApiProblemInterface;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class ApiProblemException extends HttpException

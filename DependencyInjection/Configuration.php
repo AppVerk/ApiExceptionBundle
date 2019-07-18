@@ -1,8 +1,8 @@
 <?php
 
-namespace AppVerk\ApiExceptionBundle\DependencyInjection;
+namespace SoftPassio\ApiExceptionBundle\DependencyInjection;
 
-use AppVerk\ApiExceptionBundle\Factory\ApiProblemResponseFactory;
+use SoftPassio\ApiExceptionBundle\Factory\ApiProblemResponseFactory;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -11,7 +11,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('app_verk_api_exception');
+        $rootNode = $treeBuilder->root('soft_passio_api_exception');
 
         $rootNode
             ->addDefaultsIfNotSet()
