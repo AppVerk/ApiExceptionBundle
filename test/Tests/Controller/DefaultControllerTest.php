@@ -1,6 +1,6 @@
 <?php
 
-namespace SoftPassio\ApiTestCasesBundle\test\Tests\Controller;
+namespace SoftPassio\ApiExceptionBundle\test\Tests\Controller;
 
 use SoftPassio\ApiExceptionBundle\Api\ApiProblem;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,7 +15,7 @@ class DefaultControllerTest extends WebTestCase
      */
     protected static $staticClient;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         $baseUrl = getenv('TEST_BASE_URL');
         self::$staticClient = new Client(
