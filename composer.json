@@ -28,7 +28,7 @@
     "symfony/phpunit-bridge": "^5.0",
     "guzzlehttp/guzzle": "^5.0",
     "ext-json": "*",
-    "symfony/yaml": "^5.0"
+    "symfony/yaml": "4.4.*"
   },
   "autoload": {
     "psr-4": {
