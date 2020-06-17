@@ -1,9 +1,0 @@
-defult_get:
-    path: /admin/exception
-    defaults: {_controller: SoftPassioApiExceptionBundle:Default:admin}
-    methods: [GET]
-
-defult_post:
-    path: /default/exception
-    defaults: {_controller: SoftPassioApiExceptionBundle:Default:apiException}
-    methods: [GET]
