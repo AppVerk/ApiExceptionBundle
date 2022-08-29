@@ -19,7 +19,7 @@
   "require": {
     "php": "^7.2 || ^8.0",
     "sensio/framework-extra-bundle": "^5.3 || ^6",
-    "phpunit/phpunit": "^6.2 || ^8",
+    "phpunit/phpunit": ">=6.2",
     "polishsymfonycommunity/symfony-mocker-container": "^1.0",
     "symfony/phpunit-bridge": "^4.2 || ^6",
     "guzzlehttp/guzzle": "^5.0 || ^6.0 || ^7.0"
