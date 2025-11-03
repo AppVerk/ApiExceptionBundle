@@ -10,8 +10,13 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('app_verk_app_user');
-        $rootNode = $treeBuilder->getRootNode();;
+        $treeBuilder = new TreeBuilder('app_verk_api_exception');
+        
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root('app_verk_api_exception', 'array');
+        }
 
         $rootNode
             ->addDefaultsIfNotSet()
