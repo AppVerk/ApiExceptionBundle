@@ -4,7 +4,7 @@ namespace AppVerk\ApiExceptionBundle\Factory;
 
 use AppVerk\ApiExceptionBundle\Api\ApiProblem;
 use AppVerk\ApiExceptionBundle\Component\Factory\ApiProblemFactoryInterface;
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ApiProblemFactory implements ApiProblemFactoryInterface
 {
