@@ -6,7 +6,7 @@ use AppVerk\ApiExceptionBundle\Api\ApiProblem;
 use AppVerk\ApiExceptionBundle\Component\Factory\ResponseFactoryInterface;
 use AppVerk\ApiExceptionBundle\Exception\ApiProblemException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 
@@ -35,12 +35,12 @@ class ApiExceptionSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function onKernelException(GetResponseForExceptionEvent $event)
+    public function onKernelException(ExceptionEvent $event)
     {
         if ($this->enabled !== true) {
             return;
         }
-        $e = $event->getException();
+        $e = $event->getThrowable();
         $requestPath = $event->getRequest()->getPathInfo();
 
         $statusCode = $e instanceof HttpExceptionInterface ? $e->getStatusCode() : 500;
